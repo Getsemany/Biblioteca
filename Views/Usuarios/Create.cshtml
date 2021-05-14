@@ -1,0 +1,58 @@
+@model Biblioteca.Models.Usuarios
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Usuarios</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nombre" class="control-label"></label>
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApePat" class="control-label"></label>
+                <input asp-for="ApePat" class="form-control" />
+                <span asp-validation-for="ApePat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApeMat" class="control-label"></label>
+                <input asp-for="ApeMat" class="form-control" />
+                <span asp-validation-for="ApeMat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="matricula" class="control-label"></label>
+                <input asp-for="matricula" class="form-control" />
+                <span asp-validation-for="matricula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="contraseña" class="control-label"></label>
+                <input asp-for="contraseña" class="form-control" />
+                <span asp-validation-for="contraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rol" class="control-label"></label>
+                <input asp-for="rol" class="form-control" />
+                <span asp-validation-for="rol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
